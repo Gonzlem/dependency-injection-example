@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class GreetingServiceImplTwo implements GreetingService{
     @Override
     public String greet() {
-        return "Hello! I'm greeting you from the first implementation";
+        return "Hello! I'm greeting you from the second implementation";
     }
 }
