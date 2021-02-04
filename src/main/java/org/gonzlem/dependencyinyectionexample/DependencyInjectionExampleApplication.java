@@ -12,13 +12,13 @@ public class DependencyInjectionExampleApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DependencyInjectionExampleApplication.class, args);
 
-        System.out.println("---------- Setter inyected");
+        System.out.println("---------- Setter injected");
 
         SetterInjectionController setterInjectionController = (SetterInjectionController) ctx.getBean("setterInjectionController");
 
         System.out.println(setterInjectionController.getGreeting());
 
-        System.out.println("---------- Constructor inyected");
+        System.out.println("---------- Constructor injected");
 
         ConstructorInjectionController constructorInjectionController = (ConstructorInjectionController) ctx.getBean("constructorInjectionController");
 
