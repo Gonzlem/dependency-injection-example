@@ -4,15 +4,13 @@ import org.gonzlem.dependencyinyectionexample.service.GreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+class ConstructorInjectionControllerTest {
 
-class ConstructorInyectionControllerTest {
-
-    ConstructorInyectionController controller;
+    ConstructorInjectionController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInyectionController(new GreetingServiceImpl());
+        controller = new ConstructorInjectionController(new GreetingServiceImpl());
     }
 
     @Test
