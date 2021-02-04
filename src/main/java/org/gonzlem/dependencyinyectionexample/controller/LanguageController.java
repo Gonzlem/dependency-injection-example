@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class PrimaryBeanController {
+public class LanguageController {
     private final GreetingService greetingService;
 
     @Autowired
-    public PrimaryBeanController(GreetingService greetingService) {
+    public LanguageController(@Qualifier("languageService")GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

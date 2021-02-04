@@ -1,6 +1,7 @@
 package org.gonzlem.dependencyinyectionexample;
 
 import org.gonzlem.dependencyinyectionexample.controller.ConstructorInjectionController;
+import org.gonzlem.dependencyinyectionexample.controller.LanguageController;
 import org.gonzlem.dependencyinyectionexample.controller.PrimaryBeanController;
 import org.gonzlem.dependencyinyectionexample.controller.SetterInjectionController;
 import org.springframework.boot.SpringApplication;
@@ -30,8 +31,11 @@ public class DependencyInjectionExampleApplication {
         PrimaryBeanController primaryController = (PrimaryBeanController) ctx.getBean("primaryBeanController");
 
         System.out.println(primaryController.getGreeting());
+
+        System.out.println("---------- Profile injected");
+
+        LanguageController languageController = (LanguageController) ctx.getBean("languageController");
+
+        System.out.println(languageController.getGreeting());
     }
-
-
-
 }
